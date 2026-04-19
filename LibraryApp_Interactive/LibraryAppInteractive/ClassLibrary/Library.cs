@@ -37,7 +37,8 @@ public class Library
     /// <returns></returns>
     private int DetermineLibID()
     {
-        return 0;
+        int libId = DEFAULT_LIBD_START + 1;
+        return libId;
     }
     /// <summary>
     /// Registers a new book
@@ -48,26 +49,43 @@ public class Library
     /// <param name="booktype"></param>
     /// <param name="nCopies"></param>
     /// <returns></returns>
-    //public Book RegisterBookName(string bookName, string bookISBN, string[] authors, BookType booktype, int nCopies)
-    //{
+    public Book RegisterBookName(string bookName, string bookISBN, string[] authors, BookType booktype, int nCopies)
+    {
+        Book book = new Book(bookName, bookISBN);
+        _bookList.Add(book);
 
-    //}
+        return book;
+    }
     /// <summary>
     /// Finds a book by searching with bookname
     /// </summary>
     /// <param name="bookName"></param>
     /// <returns></returns>
-    //public Book FindBookByName(string bookName)
-    //{
-
-    //}
+    public Book FindBookByName(string bookName)
+    {
+        foreach (Book book  in _bookList)
+        {
+            if (book.Name == bookName)
+            {
+                return book;
+            }
+        }
+        return null;
+    }
     /// <summary>
     /// Finds a book by searching with bookISBN
     /// </summary>
     /// <param name="bookISBN"></param>
     /// <returns></returns>
-    //public Book FindBookByISBN(string bookISBN)
-    //{
-
-    //}
+    public Book FindBookByISBN(string bookISBN)
+    {
+        foreach (Book book in _bookList)
+        {
+            if (book.ISBN == bookISBN)
+            {
+                return book;
+            }
+        }
+        return null;
+    }
 }

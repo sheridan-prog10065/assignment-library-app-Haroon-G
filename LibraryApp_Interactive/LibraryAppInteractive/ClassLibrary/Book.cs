@@ -23,6 +23,8 @@ public class Book
     /// </summary>
     private List<LibraryAssets> _libAssetList;
 
+    private AssetStatus _status;
+
     public string Name {  get { return _bookName; } set { _bookName = value; } }
     public string ISBN { get { return _bookISBN; } set { _bookISBN = value; } }
     public List<string> Authors { get { return _bookAuthorList; } set { _bookAuthorList = value; }  }
@@ -35,24 +37,25 @@ public class Book
 
         _bookAuthorList=new List<string>();
         _libAssetList=new List<LibraryAssets>();
+        _status = new AssetStatus();
     }
     /// <summary>
     /// Checks if book is currently available
     /// </summary>
     /// <param name="LibraryAsset"></param>
-    public void CheckAvailabilty(bool LibraryAsset)
-    {
-
-    }
+    //public (bool, LibraryAssets) CheckAvailabilty()
+    //{
+        
+    //}
    
     /// <summary>
     /// 
     /// </summary>
     /// <returns></returns>
-    //public LibraryAssets BorrowBook()
-    //{
-        
-    //}
+    public LibraryAssets BorrowBook()
+    {
+        return null;
+    }
 
     //public (TimeSpan, int, decimal) ReturnBook (int libID)
     //{

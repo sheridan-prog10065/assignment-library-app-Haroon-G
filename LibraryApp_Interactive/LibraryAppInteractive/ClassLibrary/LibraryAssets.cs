@@ -22,6 +22,7 @@ public class LibraryAssets
     /// </summary>
     private LoanPeriod _loanPeriod;
 
+
     public int LibId {  get { return _libID; } set { _libID = value; } }
     public AssetStatus Status { get { return _status; } set { _status = value; } }
     public LoanPeriod LoanPeriod { get { return _loanPeriod; } set { _loanPeriod = value; } }
