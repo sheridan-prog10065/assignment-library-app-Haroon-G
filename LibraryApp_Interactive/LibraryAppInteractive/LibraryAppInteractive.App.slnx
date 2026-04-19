@@ -1,5 +1,7 @@
 <Solution>
+  <Project Path="ClassLibrary/ClassLibrary.csproj" Id="6cbd1751-0bf7-46d0-bf99-16ecf0e4d85a" />
   <Project Path="LibraryApp/LibraryApp.csproj">
+    <BuildDependency Project="ClassLibrary/ClassLibrary.csproj" />
     <Deploy />
   </Project>
 </Solution>
