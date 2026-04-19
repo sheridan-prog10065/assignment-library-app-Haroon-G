@@ -3,8 +3,65 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LibraryAppInteractive.LibraryBrowsePage"
              Title="Browse Interactive Library">
-			 
-	<Label Text="Browse Library page for the Interactive Library App"
-	       HorizontalOptions="Center"
-	       VerticalOptions="Center"/> 
+
+    <Grid
+        ColumnDefinitions="1.75*, *"
+        RowDefinitions="auto, auto, auto, auto, auto, auto, *"
+        RowSpacing="20"
+        Margin="20">
+
+
+
+        <VerticalStackLayout
+            Grid.Row="1">
+            <Label
+                Text="Book Name:"/>
+            <Entry
+                x:Name="_entryBookName"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout
+            Grid.Row="2"
+            Grid.Column="0"
+            >
+
+            <HorizontalStackLayout>
+                <Label
+                    Text="Paper Book: "/>
+                <CheckBox
+                    x:Name="_chckBoxPaperBook"/>
+            </HorizontalStackLayout>
+
+
+            <HorizontalStackLayout>
+                <Label
+                    Text="Digital Book: "/>
+                <CheckBox
+                    x:Name="_chckBoxDigitalBook"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <Button
+            Text="Search Book"
+            Grid.Row="3"
+            Clicked="OnSearchBook"/>
+        <Button
+            Text="Borrow Book"
+            Grid.Row="4"
+            Clicked="OnBorrowBook"/>
+        <Button
+            Text="Return Book"
+            Grid.Row="5"
+            Clicked="OnReturnBook"/>
+
+        <Border
+            Grid.ColumnSpan="2"
+            Grid.Row="6"
+            StrokeThickness="3">
+
+            <CollectionView/>
+        </Border>
+
+    </Grid>
+
 </ContentPage>

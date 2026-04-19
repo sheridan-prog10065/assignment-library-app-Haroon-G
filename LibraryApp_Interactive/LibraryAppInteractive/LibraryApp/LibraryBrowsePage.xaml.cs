@@ -8,4 +8,19 @@ public partial class LibraryBrowsePage : ContentPage
     {   
         InitializeComponent();
     }
+
+    private void OnSearchBook(object sender, EventArgs e)
+    {
+
+    }
+
+    private void OnBorrowBook(object sender, EventArgs e)
+    {
+
+    }
+
+    private void OnReturnBook(object sender, EventArgs e)
+    {
+
+    }
 }
