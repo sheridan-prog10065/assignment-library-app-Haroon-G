@@ -31,17 +31,17 @@ public class DigitalBook : Book
     /// Represents method for borrowing digital books
     /// </summary>
     /// <returns></returns>
-    public LibraryAssets BorrowBook()
-    {
+    //public LibraryAssets BorrowBook()
+    //{
 
-    }
+    //}
     /// <summary>
     /// Represents method for returning paper books
     /// </summary>
     /// <param name="libID"></param>
     /// <returns></returns>
-    public (TimeSpan, decimal) ReturnBook(int libID)
-    {
+    //public (TimeSpan, decimal) ReturnBook(int libID)
+    //{
 
-    }
+    //}
 }

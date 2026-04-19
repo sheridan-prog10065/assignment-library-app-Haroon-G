@@ -49,38 +49,38 @@ public class Book
     /// 
     /// </summary>
     /// <returns></returns>
-    public LibraryAssets BorrowBook()
-    {
+    //public LibraryAssets BorrowBook()
+    //{
+        
+    //}
 
-    }
+    //public (TimeSpan, int, decimal) ReturnBook (int libID)
+    //{
 
-    public (TimeSpan, int, decimal) ReturnBook (int libID)
-    {
-
-    }
+    //}
     /// <summary>
     /// Reserves
     /// </summary>
     /// <returns></returns>
-    public LibraryAssets ReserveBook()
-    {
+    //public LibraryAssets ReserveBook()
+    //{
 
-    }
+    //}
     /// <summary>
     /// Locates Library Asset utilizing libID
     /// </summary>
     /// <param name="libID"></param>
     /// <returns></returns>
-    private LibraryAssets findLibraryAsset(int libID)
-    {
-
-    }
+    //private LibraryAssets findLibraryAsset(int libID)
+    //{
+    
+    //}
     /// <summary>
     /// Finds next available asset
     /// </summary>
     /// <returns></returns>
-    private LibraryAssets findNextAvailableAsset()
-    {
+    //private LibraryAssets findNextAvailableAsset()
+    //{
 
-    }
+    //}
 }

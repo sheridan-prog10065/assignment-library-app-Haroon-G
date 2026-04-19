@@ -4,9 +4,63 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LibraryAppInteractive.LibraryAdminPage"
              Title="Manage Book Assets">
-    <ContentPage.Content>
-        <Label Text="Library Admin page for the Interactive Library App"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"/>         
-    </ContentPage.Content>
+    <Grid
+        ColumnDefinitions="1.75*, *"
+        RowDefinitions="auto, auto, auto, auto, auto, auto, *"
+        RowSpacing="20"
+        Margin="20">
+
+        <Label
+            Grid.ColumnSpan="2"
+            Text="Register Book"
+            HorizontalOptions="Center"
+            FontSize="Title"/>
+
+        <VerticalStackLayout
+            Grid.Row="1">
+            <Label
+                Text="Book Name:"/>
+            <Entry
+                x:Name="_entryBookName"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout
+            Grid.Row="2"
+            Grid.Column="0"
+            >
+
+            <HorizontalStackLayout>
+                <Label
+                    Text="Paper Book: "/>
+                <CheckBox
+                    x:Name="_chckBoxPaperBook"/>
+            </HorizontalStackLayout>
+
+
+            <HorizontalStackLayout>
+                <Label
+                    Text="Digital Book: "/>
+                <CheckBox
+                    x:Name="_chckBoxDigitalBook"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <Button
+            Text="Register Book"
+            Grid.Row="3"
+            Clicked="OnRegisterBook"/>
+        <Button
+            Text="Display Book Assets"
+            Grid.Row="4"
+            Clicked="OnDisplayBookAssets"/>
+
+        <Border
+            Grid.ColumnSpan="2"
+            Grid.Row="6"
+            StrokeThickness="3">
+
+            <CollectionView/>
+        </Border>
+
+    </Grid>
 </ContentPage>
